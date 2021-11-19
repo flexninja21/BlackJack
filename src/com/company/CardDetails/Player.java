@@ -9,7 +9,7 @@ public class Player {
     private Status status;
     private Stack<Card> hand = new Stack<>();
 
-    public Player(String name, int score, Status status) {
+    public Player(String name, int score) {
         this.name = name + "" + playernumber++;
         score = score;
         this.status = status;
@@ -27,10 +27,10 @@ public class Player {
     }
     public Status playerStrategy(){
         if(getHandValue() < 17){
-            status = Status.Stick;
+            status = Status.Hit;
         }
         else if (getHandValue() >=17 || getHandValue() <21){
-            status = Status.Hit;
+            status = Status.Stick;
 
         }
         else {
