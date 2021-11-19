@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DeckTest {
 Deck cardDeck = new Deck();
-
+ Stack<Card> deck = new Stack<>();
     @Test
     void generateDeck() {
         assertEquals(52,cardDeck.generateDeck().size());
@@ -26,7 +26,8 @@ Deck cardDeck = new Deck();
 
     @Test
     void drawCard(){
+        cardDeck.generateDeck();
         cardDeck.drawCard();
-       assertEquals(51,);
+       assertEquals(51,cardDeck.getDeck().size());
     }
 }

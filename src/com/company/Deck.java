@@ -11,7 +11,7 @@ public class Deck {
    public Stack<Card> generateDeck(){
       for(CardValue cardValue:CardValue.values()){
          for (Suit suit:Suit.values()){
-            deck.add(new Card(suit,cardValue));
+            deck.push(new Card(suit,cardValue));
 
          }
       }
@@ -25,9 +25,13 @@ public class Deck {
 
    public Card drawCard(){
      Card drawCard =  deck.pop();
+
      return drawCard;
    }
 
+   public Stack<Card> getDeck() {
+      return deck;
+   }
 
    @Override
    public String toString() {
