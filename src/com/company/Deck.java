@@ -18,6 +18,10 @@ public class Deck {
       return deck;
    }
 
+   public List<Card> shuffleCards(){
+      Collections.shuffle(generateDeck());
+      return deck;
+   }
 
 
    @Override
