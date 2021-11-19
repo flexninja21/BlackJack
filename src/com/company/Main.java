@@ -6,8 +6,7 @@ public class Main {
 	// write your code
 //       Card fred = new Card(Suit.Clubs,CardValue.Ace);
 //        System.out.println(fred);
-        Deck cardde = new Deck();
-        System.out.println(cardde);
+
 
     }
 }
