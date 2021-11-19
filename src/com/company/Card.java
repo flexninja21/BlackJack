@@ -19,6 +19,14 @@ public class Card {
     public CardValue getCardValue() {
         return cardValue;
     }
+
+    @Override
+    public String toString() {
+        return "Card{" +
+                "suit=" + suit +
+                ", cardValue=" + cardValue +
+                '}';
+    }
 }
 
 

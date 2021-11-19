@@ -14,8 +14,10 @@ public enum CardValue {
     Queen(10),
     King(10),
     Ace(11);
-    public int i;
+   private int i;
+
     CardValue(int i) {
+        this.i = i;
     }
 
     public int getI(){
