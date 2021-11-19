@@ -9,10 +9,10 @@ public class Player {
     private Status status;
     private Stack<Card> hand = new Stack<>();
 
-    public Player(String name, int score) {
-        this.name = name + "" + playerNumber++;
+    public Player() {
+        name =  "PLayer" + playerNumber++;
         score = score;
-        this.status = status;
+        this.status = Player.this.playerStrategy();
     }
 
     public int getHandValue(){
@@ -25,19 +25,19 @@ public class Player {
     public Stack<Card> getHand(){
         return hand;
     }
-//    public Status playerStrategy(){
-//        if(getHandValue() < 17){
-//            status = Status.Hit;
-//        }
-//        else if (getHandValue() >=17 || getHandValue() <21){
-//            status = Status.Stick;
-//
-//        }
-//        else {
-//            status = Status.go_Bust;
-//        }
-//        return status;
-//    }
+    public Status playerStrategy(){
+        if(getHandValue() < 17){
+            status = Status.Hit;
+        }
+        else if (getHandValue() >=17 || getHandValue() <21){
+            status = Status.Stick;
+
+        }
+        else {
+            status = Status.go_Bust;
+        }
+        return status;
+    }
 
     public void addCardToHand(Card card){
         hand.add(card);
@@ -55,6 +55,10 @@ public class Player {
 
     public void setHand(Stack<Card> hand) {
         this.hand = hand;
+    }
+
+    public Status getStatus() {
+        return status;
     }
 
     public String getName() {
