@@ -1,26 +1,30 @@
 package com.company;
 
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Deck {
-   private List<Card> deck = new ArrayList<>();
+   private Stack<Card> deck = new Stack<>();
 
-   public List<Card> generateDeck(){
+
+
+   public Stack<Card> generateDeck(){
       for(CardValue cardValue:CardValue.values()){
          for (Suit suit:Suit.values()){
             deck.add(new Card(suit,cardValue));
+
          }
       }
       return deck;
    }
 
-   public List<Card> shuffleCards(){
+   public Stack<Card> shuffleCards(){
       Collections.shuffle(generateDeck());
       return deck;
+   }
+   public Card drawCard{
+      shuffleCards().push();
+
    }
 
 
