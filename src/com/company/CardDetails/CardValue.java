@@ -1,4 +1,4 @@
-package com.company;
+package com.company.CardDetails;
 
 public enum CardValue {
     Two(2),

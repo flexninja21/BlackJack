@@ -1,10 +1,9 @@
 package com.company.Test;
 
-import com.company.Card;
-import com.company.Deck;
+import com.company.CardDetails.Card;
+import com.company.CardDetails.Deck;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
 import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.*;

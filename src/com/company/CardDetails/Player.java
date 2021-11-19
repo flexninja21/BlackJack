@@ -1,16 +1,16 @@
-package com.company;
+package com.company.CardDetails;
 
-import java.util.List;
 import java.util.Stack;
 
 public class Player {
     private String name;
+    private int playernumber;
     private int score;
     private Status status;
     private Stack<Card> hand = new Stack<>();
 
     public Player(String name, int score, Status status) {
-        this.name = name;
+        this.name = name + "" + playernumber++;
         score = score;
         this.status = status;
     }
@@ -51,5 +51,9 @@ public class Player {
 
     public void setHand(Stack<Card> hand) {
         this.hand = hand;
+    }
+
+    public String getName() {
+        return name;
     }
 }

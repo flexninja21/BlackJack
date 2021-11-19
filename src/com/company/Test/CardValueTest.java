@@ -1,8 +1,8 @@
 package com.company.Test;
 
-import com.company.Card;
-import com.company.CardValue;
-import com.company.Suit;
+import com.company.CardDetails.Card;
+import com.company.CardDetails.CardValue;
+import com.company.CardDetails.Suit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
