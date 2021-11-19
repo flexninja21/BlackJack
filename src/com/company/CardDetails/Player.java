@@ -4,13 +4,13 @@ import java.util.Stack;
 
 public class Player {
     private String name;
-    private int playernumber;
+    private int playerNumber;
     private int score;
     private Status status;
     private Stack<Card> hand = new Stack<>();
 
     public Player(String name, int score) {
-        this.name = name + "" + playernumber++;
+        this.name = name + "" + playerNumber++;
         score = score;
         this.status = status;
     }
@@ -37,6 +37,10 @@ public class Player {
             status = Status.go_Bust;
         }
         return status;
+    }
+
+    public void addCardToHand(Card card){
+        hand.add(card);
     }
 
     @Override
