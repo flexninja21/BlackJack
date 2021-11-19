@@ -25,19 +25,19 @@ public class Player {
     public Stack<Card> getHand(){
         return hand;
     }
-    public Status playerStrategy(){
-        if(getHandValue() < 17){
-            status = Status.Hit;
-        }
-        else if (getHandValue() >=17 || getHandValue() <21){
-            status = Status.Stick;
-
-        }
-        else {
-            status = Status.go_Bust;
-        }
-        return status;
-    }
+//    public Status playerStrategy(){
+//        if(getHandValue() < 17){
+//            status = Status.Hit;
+//        }
+//        else if (getHandValue() >=17 || getHandValue() <21){
+//            status = Status.Stick;
+//
+//        }
+//        else {
+//            status = Status.go_Bust;
+//        }
+//        return status;
+//    }
 
     public void addCardToHand(Card card){
         hand.add(card);
