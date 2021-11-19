@@ -22,6 +22,8 @@ public class BlackJackgame {
     public void startGame() {
         this.deck.generateDeck();
         this.deck.shuffleCards();
+        dealCards();
+
     }
 
     public void dealCards() {
@@ -37,13 +39,13 @@ public class BlackJackgame {
     }
 
     public void playerRules() {
-//
         for (Player player : players) {
             player.playerStrategy();
         }
 
 
     }
+
 
 
 }
