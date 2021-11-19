@@ -22,9 +22,10 @@ public class Deck {
       Collections.shuffle(generateDeck());
       return deck;
    }
-   public Card drawCard{
-      shuffleCards().push();
 
+   public Card drawCard(){
+     Card drawCard =  deck.pop();
+     return drawCard;
    }
 
 

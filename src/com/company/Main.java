@@ -7,7 +7,10 @@ public class Main {
 //       Card fred = new Card(Suit.Clubs,CardValue.Ace);
 //        System.out.println(fred);
         Deck dick = new Deck();
-        System.out.println(dick.generateDeck());
+        dick.generateDeck();
+        dick.shuffleCards();
+        System.out.println(dick.drawCard());
+        System.out.println(dick.drawCard());
 
 
     }
