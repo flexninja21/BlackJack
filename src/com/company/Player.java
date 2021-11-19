@@ -25,4 +25,31 @@ public class Player {
     public Stack<Card> getHand(){
         return hand;
     }
+    public Status playerStrategy(){
+        if(getHandValue() < 17){
+            status = Status.Stick;
+        }
+        else if (getHandValue() >=17 || getHandValue() <21){
+            status = Status.Hit;
+
+        }
+        else {
+            status = Status.go_Bust;
+        }
+        return status;
+    }
+
+    @Override
+    public String toString() {
+        return "Play0er{" +
+                "name='" + name + '\'' +
+                ", score=" + score +
+                ", status=" + status +
+                ", hand=" + hand +
+                '}';
+    }
+
+    public void setHand(Stack<Card> hand) {
+        this.hand = hand;
+    }
 }
