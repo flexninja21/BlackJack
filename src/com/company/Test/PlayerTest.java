@@ -7,9 +7,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PlayerTest {
-Player felix = new Player();
-
-
+Player felix = new Player("dawud");
+    @Test
+    void playerStrategy() {
+        assertTrue(Status.Stick ==felix.playerStrategy());
 
     }
 }

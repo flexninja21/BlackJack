@@ -4,19 +4,17 @@ import java.util.Stack;
 
 public class Player {
     private String name;
-    private int playerNumber;
-    private int score;
+   // private int playerNumber = 0;
     private Status status;
     private Stack<Card> hand = new Stack<>();
 
-    public Player() {
-        name =  "PLayer" + playerNumber++;
-        score = score;
+    public Player(String name) {
+        this.name = name;
         this.status = Player.this.playerStrategy();
     }
 
     public int getHandValue(){
-        score = 0;
+        int score = 0;
         for(Card card :getHand() ){
             score = score + card.getCardValue().getI();
         }
@@ -38,16 +36,16 @@ public class Player {
         }
         return status;
     }
-
-    public void addCardToHand(Card card){
+    public void addHand(Card card){
         hand.add(card);
     }
+
 
     @Override
     public String toString() {
         return "Play0er{" +
                 "name='" + name + '\'' +
-                ", score=" + score +
+                ", score=" + getHandValue() +
                 ", status=" + status +
                 ", hand=" + hand +
                 '}';
@@ -56,6 +54,8 @@ public class Player {
     public void setHand(Stack<Card> hand) {
         this.hand = hand;
     }
+
+
 
     public Status getStatus() {
         return status;
