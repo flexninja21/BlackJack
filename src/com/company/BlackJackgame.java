@@ -47,7 +47,7 @@ public class BlackJackgame {
     }
 
     public void dealHitOrNot() {
-        //kwame helped that i should rather use a while
+
         while (!isWinner) {
             for (int i = 0; i < players.size(); i++) {
 
@@ -90,11 +90,11 @@ public class BlackJackgame {
            }
        }
 
-       if (stickers.size() >0) {
-           for (Player player : stickers) {
-
-           }
-       }
+//       if (stickers.size() >0) {
+//           for (Player player : stickers) {
+//
+//           }
+//       }
 
     }
 }
